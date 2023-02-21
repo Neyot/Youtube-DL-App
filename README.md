@@ -1,7 +1,7 @@
 # Youtube-DL-Wrapper-App
-[![GitHub license](https://img.shields.io/github/license/Neyot/Youtube-DL-App)](https://github.com/Neyot/Youtube-DL-App/blob/main/LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/Neyot/Youtube-DL-App?include_prereleases)](https://github.com/Neyot/Youtube-DL-App/releases)
-[![GitHub all downloads](https://img.shields.io/github/downloads/Neyot/Youtube-DL-App/total)](https://github.com/Neyot/Youtube-DL-App/releases)
+[![GitHub license](https://img.shields.io/github/license/Neyot/Youtube-DL-Wrapper-App)](https://github.com/Neyot/Youtube-DL-Wrapper-App/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/Neyot/Youtube-DL-Wrapper-App?include_prereleases)](https://github.com/Neyot/Youtube-DL-Wrapper-App/releases)
+[![GitHub all downloads](https://img.shields.io/github/downloads/Neyot/Youtube-DL-Wrapper-App/total)](https://github.com/Neyot/Youtube-DL-Wrapper-App/releases)
 
 [Youtube-DL](https://github.com/ytdl-org/youtube-dl) C# Wrapper with a WPF GUI.
 
