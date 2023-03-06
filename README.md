@@ -1,4 +1,4 @@
-# Youtube-DL-Wrapper-App
+# Youtube-DL-App
 [![GitHub license](https://img.shields.io/github/license/Neyot/Youtube-DL-Wrapper-App)](https://github.com/Neyot/Youtube-DL-Wrapper-App/blob/main/LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/Neyot/Youtube-DL-Wrapper-App?include_prereleases)](https://github.com/Neyot/Youtube-DL-Wrapper-App/releases)
 [![GitHub all downloads](https://img.shields.io/github/downloads/Neyot/Youtube-DL-Wrapper-App/total)](https://github.com/Neyot/Youtube-DL-Wrapper-App/releases)
