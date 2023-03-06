@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Youtube_DL_Wrapper
+namespace Youtube_DL_App
 {
     /// <summary>
     /// Interaction logic for App.xaml

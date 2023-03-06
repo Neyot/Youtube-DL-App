@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Youtube_DL_Wrapper
+namespace Youtube_DL_App
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
