@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube-DL-App", "Youtube-DL-App\Youtube-DL-App.csproj", "{9F77967B-0CA7-404B-9184-40818CF8D562}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube-DL-Wrapper", "Youtube-DL-Wrapper\Youtube-DL-Wrapper.csproj", "{3A75572A-728A-4D2C-8FF2-B1B0F55ADB62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9F77967B-0CA7-404B-9184-40818CF8D562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F77967B-0CA7-404B-9184-40818CF8D562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F77967B-0CA7-404B-9184-40818CF8D562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A75572A-728A-4D2C-8FF2-B1B0F55ADB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A75572A-728A-4D2C-8FF2-B1B0F55ADB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A75572A-728A-4D2C-8FF2-B1B0F55ADB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A75572A-728A-4D2C-8FF2-B1B0F55ADB62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
