@@ -1,0 +1,30 @@
+﻿<Window x:Class="Youtube_DL_App.View.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Youtube_DL_App.View"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="800">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        <TabControl Margin="10">
+            <TabItem Header="General">
+
+                <StackPanel Margin="10">
+
+                    <Label Content="Use ffmpeg?" />
+                    <CheckBox Content="Use ffmpeg" IsChecked="True" IsEnabled="False" />
+
+                    <Separator Margin="0,20,0,10" />
+
+
+                    <Label Content="Binary (youtube-dl.exe) location:" />
+                    <TextBox IsReadOnly="True" Text="{Binding BinaryPath}" />
+                    <Button HorizontalAlignment="Right" Margin="0,5,0,0" Padding="10,2,10,2" Content="Browse..." />
+
+                </StackPanel>
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -22,12 +22,12 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0" Grid.ColumnSpan="3" Background="White">
+        <Menu Grid.Row="0" Grid.ColumnSpan="3" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
             <MenuItem Header="_File">
                 <MenuItem Header="_Exit" />
             </MenuItem>
             <MenuItem Header="_Edit">
-                <MenuItem Header="_Settings" />
+                <MenuItem Header="_Settings" Command="{Binding OpenSettingsCommand}" />
             </MenuItem>
         </Menu>
 
@@ -43,7 +43,7 @@
 
         <Border Grid.Row="2" Grid.Column="1" Margin="10" 
                 BorderThickness="1" BorderBrush="Silver">
-            <WrapPanel>
+            <WrapPanel Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
 
                 <StackPanel Orientation="Horizontal" Margin="10" Height="25">
                     <CheckBox VerticalAlignment="Center" IsChecked="{Binding Options.ExtractAudio}" Content="Extract Audio" />

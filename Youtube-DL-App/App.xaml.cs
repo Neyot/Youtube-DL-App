@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Youtube_DL_App.Interfaces;
+using Youtube_DL_App.Services;
 using Youtube_DL_App.View;
 using Youtube_DL_App.ViewModel;
 
@@ -63,15 +65,18 @@ namespace Youtube_DL_App
             services.AddLogging(logging => { logging.AddSerilog(); });
 
             // Services
+            services.AddSingleton<IWindowService, WindowService>();
             //services.AddSingleton<IBinaryService, BinaryService>();
             //services.AddSingleton<IDownloadService, AudioDownloadService>();
             //services.AddSingleton<IDownloadService, VideoDownloadService>();
 
             // View Models
             services.AddSingleton<MainViewModel>();
+            services.AddSingleton<SettingsViewModel>();
 
             // Views
             services.AddSingleton<MainWindow>();
+            services.AddSingleton<Window, SettingsWindow>();
 
             return services.BuildServiceProvider();
         }

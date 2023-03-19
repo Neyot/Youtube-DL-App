@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Youtube_DL_App.Interfaces;
 using Youtube_DL_App.Mvvm;
 
 namespace Youtube_DL_App.ViewModel
@@ -12,16 +13,23 @@ namespace Youtube_DL_App.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private readonly IWindowService windowService;
+
         private OptionsViewModel? options = new OptionsViewModel();
 
         private string? url = string.Empty;
 
-        public MainViewModel()
+        public MainViewModel(IWindowService windowService)
         {
+            this.windowService = windowService ?? throw new ArgumentNullException(nameof(windowService));
+
             this.DownloadCommand = new RelayCommand(this.DownloadUrl, this.CanDownloadUrl);
+            this.OpenSettingsCommand = new RelayCommand(this.OpenSettings, this.CanOpenSettings);
         }
 
         public RelayCommand DownloadCommand { get; set; }
+
+        public RelayCommand OpenSettingsCommand { get; set; }
 
         public OptionsViewModel? Options
         {
@@ -58,6 +66,16 @@ namespace Youtube_DL_App.ViewModel
         private void DownloadUrl(object? notUsed)
         {
 
+        }
+
+        private bool CanOpenSettings(object? notUsed)
+        {
+            return true;
+        }
+
+        private void OpenSettings(object? notUsed)
+        {
+            this.windowService.OpenSettingsDialog();
         }
     }
 }
