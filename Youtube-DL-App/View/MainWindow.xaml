@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Youtube_DL_App.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
@@ -14,13 +14,22 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" Grid.ColumnSpan="3" Background="White">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Settings" />
+            </MenuItem>
+        </Menu>
 
         <Grid Grid.Row="1" Grid.Column="1" Margin="10">
             <Grid.RowDefinitions>
@@ -34,36 +43,19 @@
 
         <Border Grid.Row="2" Grid.Column="1" Margin="10" 
                 BorderThickness="1" BorderBrush="Silver">
-            
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <WrapPanel>
 
-                <Grid Grid.Column="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Margin="10" Height="25">
+                    <CheckBox VerticalAlignment="Center" IsChecked="{Binding Options.ExtractAudio}" Content="Extract Audio" />
+                </StackPanel>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Margin="10" Height="25">
+                    <TextBlock VerticalAlignment="Center" Text="Audio Format" />
+                    <ComboBox VerticalAlignment="Center" Width="100" Margin="5,0,0,0"
+                              ItemsSource="{Binding Options.AudioFormatOptions}" IsEnabled="{Binding Options.ExtractAudio}" />
+                </StackPanel>
 
-                    <Label Grid.Row="0" Grid.Column="0" Margin="2" VerticalAlignment="Center" Content="Extract Audio" />
-                    <CheckBox Grid.Row="0" Grid.Column="1" Margin="2" VerticalAlignment="Stretch" VerticalContentAlignment="Center"
-                      IsChecked="{Binding Options.ExtractAudio}" />
-
-                    <Label Grid.Row="1" Grid.Column="0" Margin="2" VerticalAlignment="Center" Content="Audio Format" />
-                    <ComboBox Grid.Row="1" Grid.Column="1" Margin="2" VerticalAlignment="Center"
-                      ItemsSource="{Binding Options.AudioFormatOptions}" IsEnabled="{Binding Options.ExtractAudio}" />
-
-                </Grid>
-
-                <GridSplitter Grid.Column="0" VerticalAlignment="Stretch" Width="5" />
-            </Grid>
+            </WrapPanel>
         </Border>
 
         <Grid Grid.Row="3" Grid.Column="1" Margin="10">
