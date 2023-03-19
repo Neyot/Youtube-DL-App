@@ -76,9 +76,20 @@ namespace Youtube_DL_App
 
             // Views
             services.AddSingleton<MainWindow>();
-            services.AddSingleton<Window, SettingsWindow>();
 
             return services.BuildServiceProvider();
+        }
+
+        /// <summary>
+        /// On startup.
+        /// </summary>
+        /// <param name="sender">This parameter is not used.</param>
+        /// <param name="e">This parameter is not used.</param>
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            var window = this.Services.GetService<MainWindow>();
+
+            window?.Show();
         }
     }
 }

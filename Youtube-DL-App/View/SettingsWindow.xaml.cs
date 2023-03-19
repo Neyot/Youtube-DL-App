@@ -24,6 +24,8 @@ namespace Youtube_DL_App.View
         public SettingsWindow()
         {
             this.InitializeComponent();
+
+            this.Owner = App.Current.Services.GetService<MainWindow>();
             this.DataContext = App.Current.Services.GetService<SettingsViewModel>();
         }
 

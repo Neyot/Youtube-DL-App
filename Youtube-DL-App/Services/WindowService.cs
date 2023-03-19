@@ -12,16 +12,9 @@ namespace Youtube_DL_App.Services
 {
     public class WindowService : IWindowService
     {
-        private readonly IEnumerable<Window> windows;
-
-        public WindowService(IEnumerable<Window> windows)
-        {
-            this.windows = windows ?? throw new ArgumentNullException(nameof(windows));
-        }
-
         public bool? OpenSettingsDialog()
         {
-            var dialog = this.windows.FirstOrDefault(w => w.GetType() == typeof(SettingsWindow));
+            var dialog = new SettingsWindow();
             return dialog?.ShowDialog();
         }
     }

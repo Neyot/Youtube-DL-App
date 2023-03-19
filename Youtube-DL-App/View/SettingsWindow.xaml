@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Youtube_DL_App.View"
         mc:Ignorable="d"
+        ShowInTaskbar="False"
         Title="Settings" Height="450" Width="800">
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <TabControl Margin="10">
