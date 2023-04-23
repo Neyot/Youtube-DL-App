@@ -24,7 +24,7 @@
 
         <Menu Grid.Row="0" Grid.ColumnSpan="3" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
             <MenuItem Header="_File">
-                <MenuItem Header="_Exit" />
+                <MenuItem Header="_Exit" Command="{Binding CloseCommand}" />
             </MenuItem>
             <MenuItem Header="_Edit">
                 <MenuItem Header="_Settings" Command="{Binding OpenSettingsCommand}" />

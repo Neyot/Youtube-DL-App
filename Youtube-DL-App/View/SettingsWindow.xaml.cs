@@ -21,6 +21,9 @@ namespace Youtube_DL_App.View
     /// </summary>
     public partial class SettingsWindow : Window
     {
+        /// <summary>
+        /// Initialises a new instance of the <see cref="SettingsWindow"/> class.
+        /// </summary>
         public SettingsWindow()
         {
             this.InitializeComponent();

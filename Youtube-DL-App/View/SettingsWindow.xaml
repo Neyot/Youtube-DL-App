@@ -21,7 +21,7 @@
 
                     <Label Content="Binary (youtube-dl.exe) location:" />
                     <TextBox IsReadOnly="True" Text="{Binding BinaryPath}" />
-                    <Button HorizontalAlignment="Right" Margin="0,5,0,0" Padding="10,2,10,2" Content="Browse..." />
+                    <Button HorizontalAlignment="Right" Margin="0,5,0,0" Padding="10,2,10,2" Content="Browse..." Command="{Binding BrowseForBinaryCommand}" />
 
                 </StackPanel>
                 

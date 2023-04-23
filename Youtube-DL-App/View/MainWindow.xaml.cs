@@ -25,7 +25,6 @@ namespace Youtube_DL_App.View
         /// <summary>
         /// Initialises a new instance of the <see cref="MainWindow"/> class.
         /// </summary>
-        /// <param name="mainViewModel">Main window view model.</param>
         public MainWindow()
         {
             this.InitializeComponent();

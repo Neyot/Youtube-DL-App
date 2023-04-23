@@ -11,6 +11,8 @@ using Youtube_DL_App.Interfaces;
 using Youtube_DL_App.Services;
 using Youtube_DL_App.View;
 using Youtube_DL_App.ViewModel;
+using Youtube_DL_Wrapper.Interfaces;
+using Youtube_DL_Wrapper.Services;
 
 namespace Youtube_DL_App
 {
@@ -65,14 +67,14 @@ namespace Youtube_DL_App
             services.AddLogging(logging => { logging.AddSerilog(); });
 
             // Services
-            services.AddSingleton<IWindowService, WindowService>();
-            //services.AddSingleton<IBinaryService, BinaryService>();
-            //services.AddSingleton<IDownloadService, AudioDownloadService>();
-            //services.AddSingleton<IDownloadService, VideoDownloadService>();
+            services.AddTransient<IWindowService, WindowService>();
+            services.AddTransient<IBinaryHelper, BinaryHelper>();
+            //services.AddTransient<IDownloadService, AudioDownloadService>();
+            //services.AddTransient<IDownloadService, VideoDownloadService>();
 
             // View Models
-            services.AddSingleton<MainViewModel>();
-            services.AddSingleton<SettingsViewModel>();
+            services.AddTransient<MainViewModel>();
+            services.AddTransient<SettingsViewModel>();
 
             // Views
             services.AddSingleton<MainWindow>();
